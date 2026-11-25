@@ -1,10 +1,6 @@
-import React from "react";
-
 function FilmCard({ film, onDelete, onFavorite }) {
-
   return (
     <div className="film-card">
-
       <h3>{film.title}</h3>
 
       <p>Année : {film.year}</p>
@@ -13,16 +9,15 @@ function FilmCard({ film, onDelete, onFavorite }) {
       <p>Durée : {film.duration}</p>
       <p>{film.description}</p>
 
-      <button onClick={() => onFavorite(film.id)}>
-        {film.favorite ? "❤️ Favori" : "🤍 Favoris"}
+      <button type="button" onClick={() => onFavorite && onFavorite(film.id)}>
+        {film.favorite ? '❤️ Favori' : '🤍 Favoris'}
       </button>
 
-      <button onClick={() => onDelete(film.id)}>
+      <button type="button" onClick={() => onDelete && onDelete(film.id)}>
         Supprimer
       </button>
-
     </div>
-  );
+  )
 }
 
-export default FilmCard;
+export default FilmCard
