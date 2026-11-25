@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import FilmCard from "./FilmCard";
 function FilmListe({ onDelete, onFavorite }) {
@@ -56,3 +57,16 @@ function FilmListe({ onDelete, onFavorite }) {
 }
 
 export default FilmListe;
+=======
+function FilmList() {
+  return (
+    <section>
+      <h1>Liste des films</h1>
+      <p>La liste des films apparaîtra ici.</p>
+    </section>
+  )
+}
+
+export default FilmList
+
+>>>>>>> f128697da6602da827e0a81cbdc5477b67a0fca6
