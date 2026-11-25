@@ -8,7 +8,7 @@ function FilmList({
   emptyMessage = 'Aucun film à afficher.',
 }) {
   return (
-    <section>
+    <section className="film-list-section">
       <h1>{title}</h1>
 
       {films.length === 0 ? (

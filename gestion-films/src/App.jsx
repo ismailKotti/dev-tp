@@ -1,7 +1,11 @@
 import { useState } from 'react'
+import './App.css'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import FilmList from './pages/FilmList'
+import avatarPoster from './assets/avatar.jpg'
+import jokerPoster from './assets/joker.jpg'
+import titanicPoster from './assets/titanic.jpg'
 
 const initialFilms = [
   {
@@ -12,6 +16,7 @@ const initialFilms = [
     director: 'James Cameron',
     duration: '2h 42min',
     description: 'Un humain découvre la planète Pandora.',
+    image: avatarPoster,
     favorite: false,
   },
   {
@@ -22,6 +27,7 @@ const initialFilms = [
     director: 'Todd Phillips',
     duration: '2h 02min',
     description: "L'histoire d'Arthur Fleck.",
+    image: jokerPoster,
     favorite: false,
   },
   {
@@ -32,6 +38,7 @@ const initialFilms = [
     director: 'James Cameron',
     duration: '3h 14min',
     description: "Une histoire d'amour à bord du Titanic.",
+    image: titanicPoster,
     favorite: false,
   },
 ]
@@ -61,7 +68,7 @@ function App() {
     <div>
       <Navbar activePage={activePage} setActivePage={setActivePage} />
 
-      <main style={{ padding: '20px' }}>
+      <main className="app-main">
         {activePage === 'accueil' && <Home setActivePage={setActivePage} />}
 
         {activePage === 'films' && (
